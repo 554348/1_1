@@ -48,6 +48,11 @@ def change_color():
   new_color = rand.choice(colors)
   spot.fillcolor(new_color)
   spot.stamp
+  
+sizes = ["1", "2", "3", "4", "5"]
+def change_size():
+  new_size = rand.choice(sizes)
+  spot.shapesize(new_size)
 
 spot.speed(0)
 def spot_clicked(x, y):
@@ -56,6 +61,7 @@ def spot_clicked(x, y):
     change_position()
     update_score()
     change_color()
+    change_size()
   else:
     spot.hideturtle()
 def change_position():
